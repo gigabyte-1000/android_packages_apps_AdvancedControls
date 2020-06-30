@@ -30,10 +30,12 @@
     <string name="dt2w_summary">Double tap on screen wake device</string>
 
     <!-- USB Fastcharge -->
+ <!--    
     <string name="usb_fastcharge_title">Power</string>
     <string name="fastcharge_title">Enable USB Fastcharge</string>
     <string name="fastcharge_summary">Use fastcharge when connected to a computer via usb port</string>
-    <string name="qc_limit_summary">Set limit for your charger per Ma</string>
+    <string name="qc_limit_summary">Set limit for your charger per Ma</string> 
+-->
 
 	<!-- Torch -->
     <string name="torch_title">Torch</string>
@@ -91,10 +93,10 @@
     <string name="dirac_preset_dance">Dance</string>
     <string name="dirac_preset_metal">Metal</string>
 
-    <!-- KCal -->
+<!-- KCal
     <string name="device_kcal_title">Display Color</string>
     <string name="device_kcal_suammary">Display color calibration using KCAL</string>
-
+ -->
     <string name="vibration_title">Haptic feedback</string>
     <string name="vibration_strength_title">Strength</string>
 
@@ -110,7 +112,7 @@
     <string name="spectrum_gaming">Gaming</string>
     <string name="spectrum_balance">Balance</string>
 
-    <!-- kcal -->
+    <!-- kcal 
     <string name="advanced_settings_kcal">Display Color Calibration</string>
     <string name="cat_colormanagement">Color Settings</string>
     <string name="cat_calibration">Display Calibration</string>
@@ -128,8 +130,8 @@
     <string name="hue">Hue</string>
     <string name="grayscale">Grayscale Display</string>
     <string name="presets_dialog_title">Select Preset</string>
-
-    <!-- Presets -->
+-->
+    <!-- Presets 
     <string name="preset_default">Default</string>
     <string name="preset_version_1">Version 1</string>
     <string name="preset_version_2">Version 2</string>
@@ -143,11 +145,11 @@
     <string name="preset_hybrid_mamba">Hybrid Mamba</string>
     <string name="preset_hide_ge1">Hide Ghosting Effect 1</string>
     <string name="preset_hide_ge2">Hide Ghosting Effect 2</string>
-
-    <!-- menu -->
+-->
+    <!-- menu 
     <string name="kcal_presets">@string/presets_dialog_title</string>
     <string name="kcal_reset">Reset</string>
-
+-->
     <!-- CustomSeekBarPreference -->
     <string name="edit_value">Choose new Value</string>
     <string name="default_value">Default Value</string>
