@@ -28,7 +28,7 @@
         <item>3</item>
     </string-array>
 
-<!-- kcal
+    <!-- kcal -->
     <array name="preset_enteries">
         <item>@string/preset_default</item>
         <item>@string/preset_version_1</item>
@@ -44,9 +44,9 @@
         <item>@string/preset_hide_ge1</item>
         <item>@string/preset_hide_ge2</item>
     </array>
--->
-<!-- R, G, B, minimum, saturation, value, contrast, hue   
-        <array name="preset_values">
+
+    <array name="preset_values">
+        <!-- R, G, B, minimum, saturation, value, contrast, hue -->
         <item>255 255 255 35 35 127 127 0</item>
         <item>237 237 237 35 40 127 127 0</item>
         <item>250 250 235 35 27 112 132 1520</item>
@@ -61,7 +61,7 @@
         <item>199 199 210 35 35 144 144 0</item>
         <item>230 230 244 35 35 144 144 0</item>
     </array>
- -->
+
         <!-- Values for Dirac headset pref -->
     <string-array name="dirac_headset_pref_entries" translatable="false">
         <item>@string/dirac_headset_default</item>

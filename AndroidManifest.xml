@@ -68,7 +68,7 @@
                 android:name="com.android.settings.summary"
                 android:resource="@string/advanced_settings_summary" />
         </activity>
- <!-- remove
+
         <activity
             android:name=".kcal.KCalSettingsActivity"
             android:exported="false"
@@ -79,7 +79,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
--->
 
         <service android:name=".StartAction" />
 

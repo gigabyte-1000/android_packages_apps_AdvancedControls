@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <!--
+
     <PreferenceCategory
         android:key="usb"
         android:title="@string/usb_fastcharge_title">
@@ -14,7 +14,7 @@
             android:icon="@drawable/ic_usb" />
 
     </PreferenceCategory>
-    -->
+
     <!--<PreferenceCategory
         android:key="qc"
         android:title="@string/usb_fastcharge_title">
@@ -25,8 +25,7 @@
             android:max="2500"
             app:min="1000"
             android:title="@string/qc_limit_summary" />
-    </PreferenceCategory>
-	-->
+    </PreferenceCategory>-->
 
     <PreferenceCategory
         android:key="fp_options"
@@ -133,7 +132,7 @@
             app:min="1"
             app:units="%" />
     </PreferenceCategory>
-<!--
+
     <PreferenceCategory
         android:key="display"
         android:title="@string/display_title">
@@ -151,7 +150,7 @@
         </Preference>
         
     </PreferenceCategory>
--->
+
     <PreferenceCategory
         android:key="spectrum_profile"
         android:title="@string/spectrum_profile_title">

@@ -7,7 +7,7 @@ import androidx.preference.PreferenceFragment;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 
-//import com.magicxavi.settings.device.kcal.KCalSettingsActivity;
+import com.magicxavi.settings.device.kcal.KCalSettingsActivity;
 import com.magicxavi.settings.device.preferences.SecureSettingCustomSeekBarPreference;
 import com.magicxavi.settings.device.preferences.SecureSettingListPreference;
 import com.magicxavi.settings.device.preferences.SecureSettingSwitchPreference;
@@ -30,8 +30,7 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String CATEGORY_GESTURES= "gestures";
     public static final String PREF_DT2W = "dt2w";
     public static final String DT2W_PATH = "/sys/android_touch/doubletap2wake";
-// Disable 
-/*
+
     private static final String CATEGORY_DISPLAY = "display";
     private static final String PREF_DEVICE_KCAL = "device_kcal";
 
@@ -39,7 +38,7 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String CATEGORY_USB= "usb";
     public static final String PREF_USB_FASTCHARGE = "usbfastcharge";
     public static final String USB_FASTCHARGE_PATH = "/sys/kernel/fast_charge/force_fast_charge";
-*/
+
     // YELLOW LED
     public static final String PREF_TORCH_BRIGHTNESS_2 = "yellow_led";
     public static final String TORCH_2_BRIGHTNESS_PATH = "/sys/devices/soc.0/qpnp-flash-led-23/leds/led:torch_1/max_brightness";
@@ -92,6 +91,7 @@ public class DeviceSettings extends PreferenceFragment implements
 
         mMicrophoneGain = (SecureSettingCustomSeekBarPreference) findPreference(PREF_MICROPHONE_GAIN);
         mMicrophoneGain.setOnPreferenceChangeListener(this);
+
         //if (FileUtils.fileWritable(QC_LIMIT_PATH)) {
         //SecureSettingCustomSeekBarPreference QuickCharge = (SecureSettingCustomSeekBarPreference) findPreference(PREF_QC_LIMIT);
         //QuickCharge.setEnabled(FileUtils.fileWritable(QC_LIMIT_PATH));
@@ -103,15 +103,14 @@ public class DeviceSettings extends PreferenceFragment implements
         VibrationSeekBarPreference vibrationStrength = (VibrationSeekBarPreference) findPreference(PREF_VIBRATION_STRENGTH);
         vibrationStrength.setEnabled(FileUtils.fileWritable(VIBRATION_STRENGTH_PATH));
         vibrationStrength.setOnPreferenceChangeListener(this);
-/*
+
         Preference kcal = findPreference(PREF_DEVICE_KCAL);
 
-         kcal.setOnPreferenceClickListener(preference -> {
+        kcal.setOnPreferenceClickListener(preference -> {
             Intent intent = new Intent(getActivity().getApplicationContext(), KCalSettingsActivity.class);
             startActivity(intent);
             return true;
         });
-*/
 
         mSPECTRUM = (SecureSettingListPreference) findPreference(PREF_SPECTRUM);
         mSPECTRUM.setValue(FileUtils.getStringProp(SPECTRUM_SYSTEM_PROPERTY, "0"));
@@ -158,15 +157,14 @@ public class DeviceSettings extends PreferenceFragment implements
         } else {
             getPreferenceScreen().removePreference(findPreference(CATEGORY_GESTURES));
         }
-// Disable
-/*         if (FileUtils.fileWritable(USB_FASTCHARGE_PATH)) {
+
+        if (FileUtils.fileWritable(USB_FASTCHARGE_PATH)) {
             SecureSettingSwitchPreference usbfastcharge = (SecureSettingSwitchPreference) findPreference(PREF_USB_FASTCHARGE);
             usbfastcharge.setChecked(FileUtils.getFileValueAsBoolean(USB_FASTCHARGE_PATH, false));
             usbfastcharge.setOnPreferenceChangeListener(this);
         } else {
             getPreferenceScreen().removePreference(findPreference(CATEGORY_USB));
-        } 
-*/
+        }
     }
 
     @Override
@@ -226,11 +224,11 @@ public class DeviceSettings extends PreferenceFragment implements
             case PREF_DT2W:
                 FileUtils.setValue(DT2W_PATH, (boolean) value);
                 break;
-// Disable option
-/*             case PREF_USB_FASTCHARGE:
+
+            case PREF_USB_FASTCHARGE:
                 FileUtils.setValue(USB_FASTCHARGE_PATH, (boolean) value);
                 break;
-*/
+
             case PREF_HEADPHONE_GAIN:
                 FileUtils.setValue(HEADPHONE_GAIN_PATH, value + " " + value);
                 break;
